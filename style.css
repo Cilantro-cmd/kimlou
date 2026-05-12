@@ -146,36 +146,73 @@ body { background: var(--bg); color: var(--text-primary); font-family: var(--fon
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  width: 100%;
   animation: fadeUp 0.9s 0.15s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+/* Disk sizing variables — change these to scale everything together */
 .disk-stage {
+  --disk-w: 263px;
+  --disk-h: 248px;
+  --fan-spread: 154px;  /* how far side disks travel when fanned */
+  --fan-rotate: 20deg;
+  --stack-offset: 8px;  /* vertical offset between stacked disks */
+
   position: relative;
-  width: 510px;
-  height: 310px;
+  width: var(--disk-w);
+  height: calc(var(--disk-h) + 60px); /* room for fan animation */
+  margin: 0 auto;
 }
 
 .disk-slot {
   position: absolute;
-  width: 263px;
-  height: 248px;
-  transition: all 0.5s cubic-bezier(0.34, 1.4, 0.64, 1);
+  top: 0;
+  left: 0;
+  width: var(--disk-w);
+  height: var(--disk-h);
+  transition: transform 0.5s cubic-bezier(0.34, 1.4, 0.64, 1),
+              filter 0.3s ease;
   transform-origin: center bottom;
   cursor: pointer;
   outline: none;
 }
 
-.disk-slot:nth-child(1) { left: 124px; top: 0;   z-index: 4; transform: rotate(-1.5deg); }
-.disk-slot:nth-child(2) { left: 130px; top: 13px;  z-index: 3; transform: rotate(1.5deg); }
-.disk-slot:nth-child(3) { left: 126px; top: 26px; z-index: 2; transform: rotate(-1deg); }
+/* STACKED state — all three disks centered on top of each other,
+   offset slightly downward and rotated for the layered look */
+.disk-slot:nth-child(1) { z-index: 4; transform: translateY(0) rotate(-1.5deg); }
+.disk-slot:nth-child(2) { z-index: 3; transform: translateY(var(--stack-offset)) rotate(1.5deg); }
+.disk-slot:nth-child(3) { z-index: 2; transform: translateY(calc(var(--stack-offset) * 2)) rotate(-1deg); }
 
-.disk-stage.fanned .disk-slot:nth-child(1) { left: -30px; top: 30px; transform: rotate(-20deg); z-index: 3; }
-.disk-stage.fanned .disk-slot:nth-child(2) { left: 124px; top: -12px; transform: rotate(0deg);   z-index: 4; }
-.disk-stage.fanned .disk-slot:nth-child(3) { left: 270px; top: 30px; transform: rotate(20deg);  z-index: 3; }
+/* FANNED state — center disk stays put, side disks translate outward */
+.disk-stage.fanned .disk-slot:nth-child(1) {
+  z-index: 3;
+  transform: translateX(calc(var(--fan-spread) * -1)) translateY(20px) rotate(calc(var(--fan-rotate) * -1));
+}
+.disk-stage.fanned .disk-slot:nth-child(2) {
+  z-index: 4;
+  transform: translateY(-8px) rotate(0deg);
+}
+.disk-stage.fanned .disk-slot:nth-child(3) {
+  z-index: 3;
+  transform: translateX(var(--fan-spread)) translateY(20px) rotate(var(--fan-rotate));
+}
 
-.disk-stage.fanned .disk-slot:nth-child(1):hover { transform: rotate(-20deg) translateY(-18px) !important; z-index: 10 !important; filter: drop-shadow(0 14px 28px rgba(204,34,34,0.18)); }
-.disk-stage.fanned .disk-slot:nth-child(2):hover { transform: rotate(0deg) translateY(-18px) !important;   z-index: 10 !important; filter: drop-shadow(0 14px 28px rgba(26,184,212,0.18)); }
-.disk-stage.fanned .disk-slot:nth-child(3):hover { transform: rotate(20deg) translateY(-18px) !important;  z-index: 10 !important; filter: drop-shadow(0 14px 28px rgba(29,158,117,0.18)); }
+/* Hover lift on fanned disks */
+.disk-stage.fanned .disk-slot:nth-child(1):hover {
+  transform: translateX(calc(var(--fan-spread) * -1)) translateY(2px) rotate(calc(var(--fan-rotate) * -1)) !important;
+  z-index: 10 !important;
+  filter: drop-shadow(0 14px 28px rgba(204,34,34,0.18));
+}
+.disk-stage.fanned .disk-slot:nth-child(2):hover {
+  transform: translateY(-26px) rotate(0deg) !important;
+  z-index: 10 !important;
+  filter: drop-shadow(0 14px 28px rgba(26,184,212,0.18));
+}
+.disk-stage.fanned .disk-slot:nth-child(3):hover {
+  transform: translateX(var(--fan-spread)) translateY(2px) rotate(var(--fan-rotate)) !important;
+  z-index: 10 !important;
+  filter: drop-shadow(0 14px 28px rgba(29,158,117,0.18));
+}
 
 .disk-stage.fanned .disk-slot:focus-visible { outline: 2px solid var(--accent-teal); outline-offset: 4px; border-radius: 8px; }
 
@@ -593,17 +630,24 @@ body { background: var(--bg); color: var(--text-primary); font-family: var(--fon
   }
 }
 
-@media (max-width: 480px) {
-  .disk-stage { width: 280px; height: 180px; transform: scale(0.88); transform-origin: center center; }
-  .disk-stage.fanned .disk-slot:nth-child(1) { left: -20px; }
-  .disk-stage.fanned .disk-slot:nth-child(2) { left: 52px; }
-  .disk-stage.fanned .disk-slot:nth-child(3) { left: 122px; }
-  .hero-inner { gap: 40px; }
+@media (max-width: 600px) {
+  .disk-stage {
+    --disk-w: 200px;
+    --disk-h: 188px;
+    --fan-spread: 110px;
+  }
+
+  .hero-inner { gap: 36px; padding: 32px 20px; }
   .nav-link { padding: 7px 13px; }
 }
 
-@media (max-width: 360px) {
-  .disk-stage { transform: scale(0.76); }
+/* Very small phones (iPhone SE and similar) */
+@media (max-width: 380px) {
+  .disk-stage {
+    --disk-w: 170px;
+    --disk-h: 160px;
+    --fan-spread: 92px;
+  }
 }
 
 /* ============================================
