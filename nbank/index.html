@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N Bank — Unified Banking · Kim Lou</title>
+  <meta name="description" content="Case study: a concept onboarding flow for a unified banking app that lets users connect multiple bank accounts in one place." />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <nav class="cs-topbar">
+    <a class="cs-back" href="/">← Back to work</a>
+    <span class="cs-topbar-name">Kim Lou — Case Study 01 / 03</span>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="cs-header">
+    <span class="cs-eyebrow">Mobile · Fintech · Concept</span>
+    <h1 class="cs-title">N Bank — Unified Banking</h1>
+    <p class="cs-lede">A concept onboarding flow for a banking aggregator app that lets people connect multiple bank accounts in one place, framed not as an advanced feature but as the obvious starting point.</p>
+  </header>
+
+  <!-- META STRIP -->
+  <div class="cs-meta">
+    <div class="cs-meta-item">
+      <span class="cs-meta-label">Role</span>
+      <span class="cs-meta-value">Solo designer</span>
+    </div>
+    <div class="cs-meta-item">
+      <span class="cs-meta-label">Tools</span>
+      <span class="cs-meta-value">Figma</span>
+    </div>
+    <div class="cs-meta-item">
+      <span class="cs-meta-label">Type</span>
+      <span class="cs-meta-value">Self-initiated concept</span>
+    </div>
+    <div class="cs-meta-item">
+      <span class="cs-meta-label">Year</span>
+      <span class="cs-meta-value">2025</span>
+    </div>
+  </div>
+
+  <!-- THE PROBLEM -->
+  <section class="cs-section">
+    <h2 class="cs-heading">The problem</h2>
+    <div class="cs-prose">
+      <p>Most banking apps assume one bank, one customer. In reality, people hold accounts across two to four institutions and switch between apps constantly: salary lands in one, the bond comes off another, the credit card sits with a third.</p>
+      <p>I wanted to design an onboarding flow for an aggregator app where "multiple banks in one place" is framed as the obvious starting point, not an advanced feature buried behind setup. The onboarding screen is where users decide whether the product is for them. If aggregation isn't the first promise, it becomes the last assumption.</p>
+    </div>
+  </section>
+
+  <!-- HERO SCREEN -->
+  <section class="cs-section cs-section--wide">
+    <div class="cs-screen">
+      <img src="/bank.gif" alt="N Bank onboarding screen showing the headline 'One Account. Every Bank.' with a stylised green card." />
+    </div>
+    <p class="cs-caption">Onboarding screen: a single promise, a stylised card that suggests rather than represents, and regulatory disclosure above the CTA.</p>
+  </section>
+
+  <!-- KEY DECISIONS -->
+  <section class="cs-section cs-section--alt">
+    <div class="cs-section-inner">
+      <h2 class="cs-heading">Key decisions</h2>
+
+      <div class="cs-decisions">
+
+        <div class="cs-decision">
+          <span class="cs-decision-num">01</span>
+          <div class="cs-decision-body">
+            <h3>Lead with one promise, not a feature list</h3>
+            <p>The headline reads "One Account. Every Bank." Onboarding screens with more than one promise dilute the promise. The supporting sentence underneath does the explaining; the headline does the convincing.</p>
+          </div>
+        </div>
+
+        <div class="cs-decision">
+          <span class="cs-decision-num">02</span>
+          <div class="cs-decision-body">
+            <h3>Stylise the card, don't photograph it</h3>
+            <p>A concept app showing a real bank's card creates trust friction the moment the user notices it isn't their bank. An abstracted card with the app's own letterform signals "your bank, represented here" without committing to one institution. The dimensional render gives it weight; the colour shift gives it warmth.</p>
+          </div>
+        </div>
+
+        <div class="cs-decision">
+          <span class="cs-decision-num">03</span>
+          <div class="cs-decision-body">
+            <h3>Put the legal disclosure above the CTA</h3>
+            <p>Fintech apps lose users at the moment trust is most needed. Burying the FDIC and license disclosure in a footer or terms-and-conditions modal treats the legal text as friction. Surfacing it above the Get Started button reframes it as evidence: this is a real bank, this is real money, here is the proof.</p>
+          </div>
+        </div>
+
+        <div class="cs-decision">
+          <span class="cs-decision-num">04</span>
+          <div class="cs-decision-body">
+            <h3>Choose a colour that the category isn't already wearing</h3>
+            <p>Banking apps default to navy, green, or neon orange. The category is over-coded. Choosing a purple gradient is a brand decision, not a decorative one — it makes the app distinguishable in a screenshot, which is the form in which fintech apps actually spread.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PULL QUOTE -->
+  <section class="cs-section">
+    <p class="cs-pull">If aggregation isn't the first promise, it becomes the last assumption.</p>
+  </section>
+
+  <!-- WHAT I'D DO DIFFERENTLY -->
+  <section class="cs-section">
+    <h2 class="cs-heading">What I'd do differently, or next</h2>
+    <div class="cs-prose">
+      <p>The current flow stops at the welcome screen. The harder design problem starts at step two: how does a user actually link a Standard Bank account to an FNB account inside one app, and what does the screen look like when the link fails halfway through?</p>
+      <p>Concept welcome screens are the easy part of fintech design. The interesting work is the error states, the retry flows, the "we couldn't verify your identity" moment when a user has already invested twelve minutes in setup. That's the version I'd build next, and it's the version I'd want a reviewer to look at.</p>
+    </div>
+  </section>
+
+  <!-- NEXT -->
+  <section class="cs-next">
+    <span class="cs-next-eyebrow">Next case study</span>
+    <a class="cs-next-link" href="/health/">
+      Health Monitor App
+      <span class="cs-next-arrow">→</span>
+    </a>
+  </section>
+
+  <footer class="site-footer">
+    <span>© 2026 Kim Lou</span>
+    <a class="back-top" href="/">← Back to work</a>
+  </footer>
+
+</body>
+</html>

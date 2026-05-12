@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Monitor App · Kim Lou</title>
+  <meta name="description" content="Case study: a concept personal health dashboard combining appointments, vitals, and daily medication on one screen." />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <nav class="cs-topbar">
+    <a class="cs-back" href="/">← Back to work</a>
+    <span class="cs-topbar-name">Kim Lou — Case Study 02 / 03</span>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="cs-header">
+    <span class="cs-eyebrow">Mobile · Health · Concept</span>
+    <h1 class="cs-title">Health Monitor App</h1>
+    <p class="cs-lede">A concept personal health dashboard combining appointments, vitals, and daily medication on one screen, designed to answer "what about my health do I need to think about today?" without making the user dig.</p>
+  </header>
+
+  <!-- META STRIP -->
+  <div class="cs-meta">
+    <div class="cs-meta-item">
+      <span class="cs-meta-label">Role</span>
+      <span class="cs-meta-value">Solo designer</span>
+    </div>
+    <div class="cs-meta-item">
+      <span class="cs-meta-label">Tools</span>
+      <span class="cs-meta-value">Figma</span>
+    </div>
+    <div class="cs-meta-item">
+      <span class="cs-meta-label">Type</span>
+      <span class="cs-meta-value">Self-initiated concept</span>
+    </div>
+    <div class="cs-meta-item">
+      <span class="cs-meta-label">Year</span>
+      <span class="cs-meta-value">2025</span>
+    </div>
+  </div>
+
+  <!-- THE PROBLEM -->
+  <section class="cs-section">
+    <h2 class="cs-heading">The problem</h2>
+    <div class="cs-prose">
+      <p>Health tracking apps usually do one thing well: vitals, or medication, or appointments. Users with a real condition or routine end up juggling three or four apps to build a complete picture of what their body is doing this week.</p>
+      <p>I wanted to design a single home screen that answers one question on open: what about my health do I need to think about today? Not "look at all your data." Not "set up your next reminder." Just: what's next, what's normal, what's pending.</p>
+    </div>
+  </section>
+
+  <!-- HERO SCREEN -->
+  <section class="cs-section cs-section--wide">
+    <div class="cs-screen">
+      <img src="/health.gif" alt="Health Monitor app home screen showing 'Good Evening, Jane' greeting, an upcoming appointment card, vitals tiles, and a medication checklist." />
+    </div>
+    <p class="cs-caption">Home screen: greeting, action-needed appointment, passive vitals, daily medication. Top to bottom in order of "does this need me today?"</p>
+  </section>
+
+  <!-- KEY DECISIONS -->
+  <section class="cs-section cs-section--alt">
+    <div class="cs-section-inner">
+      <h2 class="cs-heading">Key decisions</h2>
+
+      <div class="cs-decisions">
+
+        <div class="cs-decision">
+          <span class="cs-decision-num">01</span>
+          <div class="cs-decision-body">
+            <h3>Time-sensitive items above passive data</h3>
+            <p>The upcoming appointment sits at the top of the screen. Heart rate, blood pressure, steps, and sleep sit below it. What needs my action today comes before what's true about me today. A dashboard that surfaces vitals first feels like a chart; a dashboard that surfaces an upcoming appointment first feels like an assistant.</p>
+          </div>
+        </div>
+
+        <div class="cs-decision">
+          <span class="cs-decision-num">02</span>
+          <div class="cs-decision-body">
+            <h3>Two typefaces, two voices</h3>
+            <p>The greeting is set in an editorial serif. The data is set in sans-serif. The greeting is meant to feel like a person speaking; the data is meant to feel precise. Same screen, different jobs. A single typeface would have flattened the emotional register of the screen into pure information.</p>
+          </div>
+        </div>
+
+        <div class="cs-decision">
+          <span class="cs-decision-num">03</span>
+          <div class="cs-decision-body">
+            <h3>Warm cream instead of clinical white</h3>
+            <p>Health apps default to hospital aesthetics: white backgrounds, blue accents, sans-serif precision. People don't want to feel they're at the doctor every time they open the app, especially the people who use these apps daily because they have to. The warm background does most of the work; the considered green accent does the rest.</p>
+          </div>
+        </div>
+
+        <div class="cs-decision">
+          <span class="cs-decision-num">04</span>
+          <div class="cs-decision-body">
+            <h3>Medication as a checklist, not a list</h3>
+            <p>The interaction is the point. Checking off Vitamin D3 is the small ritual the screen exists to support. A read-only list of medications taken today would have been informationally equivalent and emotionally inert. Designing the affordance for action, not just display, is what makes this section earn its space on the home screen.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PULL QUOTE -->
+  <section class="cs-section">
+    <p class="cs-pull">What needs my action today comes before what's true about me today.</p>
+  </section>
+
+  <!-- WHAT I'D DO DIFFERENTLY -->
+  <section class="cs-section">
+    <h2 class="cs-heading">What I'd do differently, or next</h2>
+    <div class="cs-prose">
+      <p>The current screen handles a good day: appointment scheduled, vitals normal, two of three medications taken. The harder version is the bad day: missed appointment, abnormal blood pressure, three days of unchecked medication.</p>
+      <p>How does the dashboard surface concern without inducing anxiety? What does an abnormal reading look like that's informative rather than alarming? When a user has skipped medication for three days, is the right design to nag, to ask, or to step back? Those are the screens the next iteration would need to answer, and they're the screens that would separate this concept from a polished mock.</p>
+    </div>
+  </section>
+
+  <!-- NEXT -->
+  <section class="cs-next">
+    <span class="cs-next-eyebrow">Next case study</span>
+    <a class="cs-next-link" href="/aquarius/">
+      Aquarius Capital
+      <span class="cs-next-arrow">→</span>
+    </a>
+  </section>
+
+  <footer class="site-footer">
+    <span>© 2026 Kim Lou</span>
+    <a class="back-top" href="/">← Back to work</a>
+  </footer>
+
+</body>
+</html>

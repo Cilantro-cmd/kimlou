@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kim Lou UI/UX Designer</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- FLOATING NAV -->
+  <nav class="float-nav" id="floatNav">
+    <div class="nav-inner">
+      <a class="nav-link" href="#top" data-section="top">Home</a>
+      <a class="nav-link" href="#mywork-section" data-section="mywork-section">Work</a>
+      <a class="nav-link" href="#about-section" data-section="about-section">About</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="scanlines"></div>
+    <div class="crt-vignette"></div>
+    <div class="hero-inner">
+      <div class="name-block">
+        <h1 class="name-title">Kim Lou</h1>
+        <p class="name-sub">UI / UX Designer</p>
+      </div>
+
+      <div class="stack-area">
+        <div class="disk-stage" id="stage">
+
+          <!-- DISK 1: My Work -->
+          <div class="disk-slot" data-page="mywork" role="button" tabindex="0" aria-label="My Work">
+            <svg class="disk-svg" viewBox="0 0 170 160" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="162" height="152" rx="8" fill="#1a1a1a" stroke="#000" stroke-width="2"/>
+              <rect x="28" y="8" width="114" height="44" rx="4" fill="#a8adb2"/>
+              <rect x="28" y="8" width="57" height="44" rx="4" fill="#c0c5cc"/>
+              <rect x="70" y="12" width="30" height="36" rx="3" fill="#222226"/>
+              <rect x="7" y="18" width="10" height="18" rx="2" fill="#111"/>
+              <polygon points="10,23 15,18 15,23" fill="#444"/>
+              <rect x="20" y="62" width="130" height="66" rx="3" fill="#f0ede0" stroke="#d0cdc0" stroke-width="0.5"/>
+              <rect x="20" y="62" width="22" height="66" rx="3" fill="#cc2222"/>
+              <text x="102" y="99" text-anchor="middle" font-family="'Bebas Neue', Impact, sans-serif" font-size="16" fill="#1a1a1a" letter-spacing="1">My Work</text>
+              <rect x="9" y="138" width="13" height="10" rx="2" fill="#111"/>
+              <rect x="148" y="138" width="13" height="10" rx="2" fill="#e0ddd0"/>
+            </svg>
+            <span class="disk-tooltip">My Work</span>
+          </div>
+
+          <!-- DISK 2: About Me -->
+          <div class="disk-slot" data-page="about" role="button" tabindex="0" aria-label="About Me">
+            <svg class="disk-svg" viewBox="0 0 170 160" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="162" height="152" rx="8" fill="#1a2240" stroke="#0d1530" stroke-width="2"/>
+              <rect x="28" y="8" width="114" height="44" rx="4" fill="#d4a800"/>
+              <rect x="28" y="8" width="57" height="44" rx="4" fill="#f0c000"/>
+              <rect x="70" y="12" width="30" height="36" rx="3" fill="#1a2240"/>
+              <rect x="7" y="18" width="10" height="18" rx="2" fill="#0d1530"/>
+              <polygon points="10,23 15,18 15,23" fill="#3a4a7a"/>
+              <rect x="20" y="62" width="130" height="66" rx="3" fill="#f0ede0" stroke="#d0cdc0" stroke-width="0.5"/>
+              <rect x="20" y="62" width="22" height="66" rx="3" fill="#1ab8d4"/>
+              <text x="102" y="99" text-anchor="middle" font-family="'Bebas Neue', Impact, sans-serif" font-size="16" fill="#1a1a1a" letter-spacing="1">About Me</text>
+              <rect x="9" y="138" width="13" height="10" rx="2" fill="#0d1530"/>
+              <rect x="148" y="138" width="13" height="10" rx="2" fill="#ddd"/>
+            </svg>
+            <span class="disk-tooltip">About Me</span>
+          </div>
+
+          <!-- DISK 3: Contact -->
+          <div class="disk-slot" data-page="contact" role="button" tabindex="0" aria-label="Contact">
+            <svg class="disk-svg" viewBox="0 0 170 160" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="162" height="152" rx="8" fill="#565b64" stroke="#3a3f48" stroke-width="2"/>
+              <rect x="28" y="8" width="114" height="44" rx="4" fill="#b0b5bc"/>
+              <rect x="28" y="8" width="57" height="44" rx="4" fill="#d0d5dc"/>
+              <rect x="70" y="12" width="30" height="36" rx="3" fill="#2a2f38"/>
+              <rect x="7" y="18" width="10" height="18" rx="2" fill="#3a3f48"/>
+              <polygon points="10,23 15,18 15,23" fill="#888"/>
+              <rect x="20" y="62" width="130" height="66" rx="3" fill="#f0ede0" stroke="#d0cdc0" stroke-width="0.5"/>
+              <rect x="20" y="62" width="22" height="66" rx="3" fill="#1d9e75"/>
+              <text x="102" y="99" text-anchor="middle" font-family="'Bebas Neue', Impact, sans-serif" font-size="16" fill="#1a1a1a" letter-spacing="1">Contact</text>
+              <rect x="9" y="138" width="13" height="10" rx="2" fill="#3a3f48"/>
+              <rect x="148" y="138" width="13" height="10" rx="2" fill="#eee"/>
+            </svg>
+            <span class="disk-tooltip">Contact</span>
+          </div>
+
+        </div>
+        <p class="hint" id="hint">hover or tap to explore</p>
+        <p class="tagline">Archived ideas. Active thinking.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MY WORK SECTION -->
+  <section class="content-section" id="mywork-section">
+    <div class="section-inner">
+      <span class="section-label">My Work</span>
+      <h2 class="section-title">Selected Projects</h2>
+      <p class="section-body">A selection of UI/UX work — from health tracking to fintech.</p>
+
+      <div class="project-grid">
+
+        <!-- Project 1: N Bank -->
+        <a class="project-card" href="/nbank/">
+          <div class="project-media">
+            <img src="/bank.gif" alt="Banking app UI" class="project-gif" loading="lazy" />
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-tag">Mobile · Fintech</span>
+            </div>
+            <p class="project-title">N Bank — Unified Banking</p>
+            <p class="project-desc">A concept onboarding flow for a unified banking app, connecting multiple accounts in one place with a clean, trust-forward visual system.</p>
+            <span class="project-cta">Read case study →</span>
+          </div>
+        </a>
+
+        <!-- Project 2: Health App -->
+        <a class="project-card" href="/health/">
+          <div class="project-media">
+            <img src="/health.gif" alt="Health monitoring app UI" class="project-gif" loading="lazy" />
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-tag">Mobile · Health</span>
+            </div>
+            <p class="project-title">Health Monitor App</p>
+            <p class="project-desc">A concept personal health dashboard surfacing vitals, upcoming appointments, and daily medication — designed with editorial typography and a calm, considered palette.</p>
+            <span class="project-cta">Read case study →</span>
+          </div>
+        </a>
+
+        <!-- Project 3: Aquarius Capital -->
+        <a class="project-card" href="/aquarius/">
+          <div class="project-media">
+            <img src="/webpage.gif" alt="Aquarius Capital website UI" class="project-gif project-gif--wide" loading="lazy" />
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-tag">Web · Finance</span>
+            </div>
+            <p class="project-title">Aquarius Capital — Website</p>
+            <p class="project-desc">A concept refined editorial website for a South African corporate finance firm.</p>
+            <span class="project-cta">Read case study →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="content-section alt-section" id="about-section">
+    <div class="section-inner about-inner">
+      <div class="about-text">
+        <span class="section-label">About Me</span>
+        <h2 class="section-title">Kim Lou</h2>
+        <p class="about-body">I'm a UI designer with a background in law. After training as a candidate attorney at a global firm, I moved into design — bringing the same habits of structured thinking, careful reading, and attention to edge cases to a different kind of problem.</p>
+        <p class="about-body">My work focuses on turning complex flows into interfaces that feel simple and consistent. I build with design systems and reusable components, and I think about how every screen connects to the next.</p>
+        <p class="about-body">I'm looking for a team where clarity matters and where I can do work that holds up to scrutiny.</p>
+      </div>
+      <div class="about-sidebar">
+        <div class="about-tags">
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">UI Design</span>
+          <span class="skill-tag">UX Research</span>
+          <span class="skill-tag">Design Systems</span>
+          <span class="skill-tag">HTML / CSS</span>
+          <span class="skill-tag">Prototyping</span>
+          <span class="skill-tag">Legal Background</span>
+          <span class="skill-tag">Component Libraries</span>
+        </div>
+        <div class="about-portrait">
+          <img src="/profile.png" alt="Kim Lou" class="portrait-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section" id="contact-section">
+    <div class="section-inner contact-inner">
+      <span class="section-label">Get in Touch</span>
+      <h2 class="section-title">Let's Work Together</h2>
+      <p class="section-body">Have a project in mind?</p>
+      <div class="email-wrap">
+        <button class="email-btn" id="emailBtn">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="2" y="5" width="10" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2" fill="none"/>
+            <path d="M4 3h8a1.5 1.5 0 0 1 1.5 1.5v7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+          </svg>
+          <span class="email-text">klou.uiux@gmail.com</span>
+        </button>
+        <p class="copied-note" id="copiedNote">✓ copied to clipboard</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span>© 2026 Kim Lou</span>
+    <button class="back-top" onclick="document.getElementById('top').scrollIntoView({behavior:'smooth'})">↑ Back to top</button>
+  </footer>
+
+  <script src="/main.js"></script>
+</body>
+</html>
